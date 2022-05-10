@@ -1,0 +1,43 @@
+body{
+    background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+}
+
+.button-div{
+    display: flex;
+    justify-content: center;
+}
+
+.button{
+    margin: 2px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.token{
+    width: 15rem;
+}
+
+div input {
+    width: 20%;
+    font-size: 1rem;
+}
+
+.submit-btn{
+    margin-top: 1rem;
+    width: 7%;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.login-btn{
+    margin-top: 1rem;
+    width: 7%;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

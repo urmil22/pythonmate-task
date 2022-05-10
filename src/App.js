@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Button from "./Button";
+import { Routes } from "./routes/Routes";
+import {useAuth} from "./context/AuthProvider"
+import RegistrationForm from "./RegistrationForm";
 
 function App() {
+
+const {token} = useAuth()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Button />
+      {token ? <div>
+        <h1>Hey, User logged in succesfully</h1>
+        <h4 className="token">Your personal access token is: ${token}</h4>
+      </div> : <h1>Login to access</h1>}
+      
+      <Routes />
+    </>
   );
 }
 
